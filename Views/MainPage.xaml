@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ShepherdEplan.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid RowDefinitions="Auto, *" Padding="10">
+
+        <!-- Botón de carga -->
+        <Button
+            Text="Cargar materiales"
+            Command="{Binding LoadCommand}"
+            Margin="0,0,0,10" />
+
+        <!-- Tabla con materiales -->
+        <CollectionView
+            Grid.Row="1"
+            ItemsSource="{Binding Materials}"
+            SelectionMode="None">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid ColumnDefinitions="80,80,80,140,140,200,80,80,100,100,80,100"
+                          Padding="5"
+                          ColumnSpacing="5"
+                          MinimumHeightRequest="60">
+
+                        <Image Grid.Column="0"
+                               WidthRequest="60"
+                               HeightRequest="60"
+                               Aspect="AspectFit"
+                               Source="{Binding ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" />
+
+                        <Label Grid.Column="1" Text="{Binding Location}" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="2" Text="{Binding Group}" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="3" Text="{Binding Sap}" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="4" Text="{Binding Comments}" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="5" Text="{Binding Description}" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="6" Text="{Binding Category}" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="7" Text="{Binding Status}" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="8" Text="{Binding Stock}" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="9" Text="{Binding Provider}" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="10" Text="{Binding ProviderRef}" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="11" Text="{Binding Quantity}" VerticalTextAlignment="Center"/>
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>
