@@ -1,4 +1,5 @@
-﻿using ShepherdEplan.Models;
+﻿using System.Diagnostics;
+using ShepherdEplan.Models;
 
 namespace ShepherdEplan.Services.Eplan
 {
@@ -9,6 +10,8 @@ namespace ShepherdEplan.Services.Eplan
         public List<EplanMatInfoModel> LoadEplanMaterials(string? filePath = null)
         {
             filePath ??= DefaultPath;
+
+            Debug.WriteLine($"[EPLAN] Cargando archivo: {filePath}");
 
             if (!File.Exists(filePath))
                 throw new FileNotFoundException($"No se encuentra el fichero EPLAN-SAP: {filePath}");
@@ -26,6 +29,7 @@ namespace ShepherdEplan.Services.Eplan
                     result.Add(model);
             }
 
+            Debug.WriteLine($"[EPLAN] ✓ Cargados {result.Count} materiales");
             return result;
         }
 
@@ -33,33 +37,25 @@ namespace ShepherdEplan.Services.Eplan
         {
             try
             {
-                // Separación por espacios
                 var parts = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
                 if (parts.Length < 3)
                     return null;
 
-                // Location (=100)
                 string location = parts[0];
-
-                // Group (+S1, +, etc.)
                 string rawGroup = parts[1];
                 string? group = rawGroup == "+" ? null : rawGroup;
-
-                // Parte intermedia donde está el SAP
                 string body = parts[2];
-
-                // Último bloque (cantidad)
                 string qtyString = parts.Last();
+
                 if (!int.TryParse(qtyString, out int qty))
                     qty = 0;
 
-                // Buscar los últimos 10 dígitos dentro del cuerpo
                 var digits = new string(body.Where(char.IsDigit).ToArray());
                 if (digits.Length < 10)
                     return null;
 
-                string sap = digits[^10..]; // últimos 10 dígitos
+                string sap = digits[^10..];
 
                 return new EplanMatInfoModel
                 {
@@ -71,8 +67,9 @@ namespace ShepherdEplan.Services.Eplan
                     Project = null
                 };
             }
-            catch
+            catch (Exception ex)
             {
+                Debug.WriteLine($"[EPLAN] Error parseando línea '{line}': {ex.Message}");
                 return null;
             }
         }

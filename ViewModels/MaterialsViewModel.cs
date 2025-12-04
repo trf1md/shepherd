@@ -1,6 +1,7 @@
-using System;
+﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using ShepherdEplan.Models;
@@ -11,6 +12,13 @@ namespace ShepherdEplan.ViewModels
     public sealed class MaterialsViewModel : INotifyPropertyChanged
     {
         private readonly DataMergeService _dataMerge;
+
+        private int _buttonPressCount;
+        public int ButtonPressCount
+        {
+            get => _buttonPressCount;
+            set => SetProperty(ref _buttonPressCount, value);
+        }
 
         public ObservableCollection<MaterialModel> Materials { get; }
             = new ObservableCollection<MaterialModel>();
@@ -35,16 +43,27 @@ namespace ShepherdEplan.ViewModels
         {
             _dataMerge = dataMerge;
 
-            LoadCommand = new RelayCommand(async () => await LoadMaterialsAsync());
+            LoadCommand = new RelayCommand(async () =>
+            {
+                ButtonPressCount++;
+                Debug.WriteLine($"[DEBUG] BOTÓN PULSADO → total: {ButtonPressCount}");
+                await LoadMaterialsAsync();
+            });
 
-            // Carga autom�tica al iniciar
-            Task.Run(async () => await LoadMaterialsAsync());
+            // Auto-load on startup - properly marshalled to UI thread
+            Debug.WriteLine("[DEBUG] Carga automática al iniciar ViewModel...");
+            _ = LoadMaterialsAsync();
         }
 
         private async Task LoadMaterialsAsync()
         {
+            Debug.WriteLine("[DEBUG] LoadMaterialsAsync() llamado");
+
             if (IsBusy)
+            {
+                Debug.WriteLine("[DEBUG] Cancelado: IsBusy = true");
                 return;
+            }
 
             try
             {
@@ -52,26 +71,39 @@ namespace ShepherdEplan.ViewModels
                 ErrorMessage = null;
                 Materials.Clear();
 
+                Debug.WriteLine("[DEBUG] Iniciando carga de datos...");
+
                 string eplanFile = @"C:\temp\EPLAN-SAP.txt";
                 string excelFile = @"\\md02fs05.emea.bosch.com\ATMO2Storage$\00_Public\37_HW_Eplan\DB\Material_STD.xlsm";
                 string apiBaseUrl = "https://md0vm00162.emea.bosch.com/materials/api/";
 
+                Debug.WriteLine("[DEBUG] Ejecutando _dataMerge.BuildMaterialListAsync()...");
+
                 var list = await _dataMerge.BuildMaterialListAsync(eplanFile, excelFile, apiBaseUrl);
 
-                foreach (var item in list)
-                    Materials.Add(item);
+                Debug.WriteLine($"[DEBUG] Materiales obtenidos: {list.Count}");
+
+                // Ensure we're on the UI thread when updating ObservableCollection
+                await MainThread.InvokeOnMainThreadAsync(() =>
+                {
+                    foreach (var item in list)
+                        Materials.Add(item);
+
+                    Debug.WriteLine("[DEBUG] Materiales añadidos al ObservableCollection.");
+                });
             }
             catch (Exception ex)
             {
                 ErrorMessage = $"Error cargando materiales: {ex.Message}";
+                Debug.WriteLine($"[ERROR] {ex}");
             }
             finally
             {
                 IsBusy = false;
+                Debug.WriteLine("[DEBUG] IsBusy = false");
             }
         }
 
-        // ------------- NotifyPropertyChanged -------------
         public event PropertyChangedEventHandler? PropertyChanged;
 
         private void OnPropertyChanged([CallerMemberName] string? name = null)
@@ -90,7 +122,6 @@ namespace ShepherdEplan.ViewModels
         }
     }
 
-    // ------------- ICommand personalizado -------------
     public sealed class RelayCommand : ICommand
     {
         private readonly Func<Task>? _asyncExecute;

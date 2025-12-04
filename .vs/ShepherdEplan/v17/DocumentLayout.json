@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\services\\merge\\datamergeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:services\\merge\\datamergeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\services\\eplan\\geteplanmatinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:services\\eplan\\geteplanmatinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\services\\standard\\getstdmatinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:services\\standard\\getstdmatinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\viewmodels\\materialsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:viewmodels\\materialsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\converters\\bytearraytoimageconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:converters\\bytearraytoimageconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\models\\materialmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:models\\materialmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\viewmodels\\materialsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:viewmodels\\materialsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,30 +46,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "gitignore",
-              "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\gitignore",
-              "RelativeDocumentMoniker": "gitignore",
-              "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\gitignore",
-              "RelativeToolTip": "gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-03T15:53:58.458Z",
+              "DocumentIndex": 4,
+              "Title": "ByteArrayToImageConverter.cs",
+              "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Converters\\ByteArrayToImageConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\ByteArrayToImageConverter.cs",
+              "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Converters\\ByteArrayToImageConverter.cs",
+              "RelativeToolTip": "Converters\\ByteArrayToImageConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T11:56:29.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MaterialModel.cs",
+              "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Models\\MaterialModel.cs",
+              "RelativeDocumentMoniker": "Models\\MaterialModel.cs",
+              "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Models\\MaterialModel.cs",
+              "RelativeToolTip": "Models\\MaterialModel.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA7wCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T11:56:03.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetStdMatInfoService.cs",
+              "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Services\\Standard\\GetStdMatInfoService.cs",
+              "RelativeDocumentMoniker": "Services\\Standard\\GetStdMatInfoService.cs",
+              "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Services\\Standard\\GetStdMatInfoService.cs",
+              "RelativeToolTip": "Services\\Standard\\GetStdMatInfoService.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAUwGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T11:55:18.668Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "GetEplanMatInfoService.cs",
+              "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Services\\Eplan\\GetEplanMatInfoService.cs",
+              "RelativeDocumentMoniker": "Services\\Eplan\\GetEplanMatInfoService.cs",
+              "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Services\\Eplan\\GetEplanMatInfoService.cs",
+              "RelativeToolTip": "Services\\Eplan\\GetEplanMatInfoService.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAUwEwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T11:54:54.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataMergeService.cs",
+              "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Services\\Merge\\DataMergeService.cs",
+              "RelativeDocumentMoniker": "Services\\Merge\\DataMergeService.cs",
+              "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Services\\Merge\\DataMergeService.cs",
+              "RelativeToolTip": "Services\\Merge\\DataMergeService.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAmwD4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T11:54:10.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Views\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Views\\MainPage.xaml.cs",
+              "RelativeToolTip": "Views\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T16:10:11.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Views\\MainPage.xaml",
               "RelativeDocumentMoniker": "Views\\MainPage.xaml",
               "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Views\\MainPage.xaml",
               "RelativeToolTip": "Views\\MainPage.xaml",
-              "ViewState": "AgIAACAAAAAAAAAAAAAiwDcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAADcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-12-03T15:49:44.188Z",
               "EditorCaption": ""
@@ -62,14 +147,14 @@
               "RelativeDocumentMoniker": "ViewModels\\MaterialsViewModel.cs",
               "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\ViewModels\\MaterialsViewModel.cs",
               "RelativeToolTip": "ViewModels\\MaterialsViewModel.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAswIAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIgAAAAAAAAAAAA4wJ4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T12:04:17.05Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -77,8 +162,7 @@
               "RelativeToolTip": "App.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-03T11:57:23.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T11:57:23.964Z"
             }
           ]
         }

@@ -1,10 +1,9 @@
+ï»¿using System.Diagnostics;
 using ShepherdEplan.Services.SAP;
 using ShepherdEplan.Services.Standard;
 using ShepherdEplan.Models;
 using ShepherdEplan.Services.Eplan;
 using ShepherdEplan.Services.Images;
-using ShepherdEplan.Services.SAP;
-using ShepherdEplan.Services.Standard;
 
 namespace ShepherdEplan.Services.Merge
 {
@@ -34,58 +33,77 @@ namespace ShepherdEplan.Services.Merge
         {
             var result = new List<MaterialModel>();
 
-            // 1. Datos EPLAN (lista base)
-            var eplanList = _eplanService.LoadEplanMaterials(eplanFilePath);
+            Debug.WriteLine("[MERGE] Paso 1: Cargando datos EPLAN...");
 
+            // 1. Load EPLAN data (run on background thread to avoid blocking)
+            var eplanList = await Task.Run(() => _eplanService.LoadEplanMaterials(eplanFilePath));
+            Debug.WriteLine($"[MERGE] EPLAN cargado: {eplanList.Count} materiales");
+
+            Debug.WriteLine("[MERGE] Paso 2: Cargando Excel completo UNA SOLA VEZ...");
+
+            // 2. Load Excel ONCE and build a dictionary (CRITICAL FIX!)
+            var excelLookup = await Task.Run(() => _stdService.LoadAllMaterialsFromExcel(excelPath));
+            Debug.WriteLine($"[MERGE] Excel cargado: {excelLookup.Count} materiales en diccionario");
+
+            Debug.WriteLine("[MERGE] Paso 3: Procesando cada material...");
+
+            int processedCount = 0;
             foreach (var ep in eplanList)
             {
-                // 2. Excel estándar (buscar SAP en todas las hojas)
-                var std = _stdService.LoadMaterialFromExcel(excelPath, ep.Sap);
+                processedCount++;
+                if (processedCount % 10 == 0)
+                {
+                    Debug.WriteLine($"[MERGE] Procesados {processedCount}/{eplanList.Count}...");
+                }
 
-                // 3. API SAP
-                var sap = await _sapService.LoadFromApiAsync(apiBaseUrl, ep.Sap);
+                // 3. Lookup in Excel dictionary (no file I/O!)
+                excelLookup.TryGetValue(ep.Sap, out var std);
 
-                // 4. Imagen
+                // 4. API SAP (already async)
+                SapMatInfoModel? sap = null;
+                try
+                {
+                    sap = await _sapService.LoadFromApiAsync(apiBaseUrl, ep.Sap);
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"[MERGE] Error API para SAP {ep.Sap}: {ex.Message}");
+                }
+
+                // 5. Image (already async)
                 byte[]? imageBytes = null;
                 try
                 {
                     imageBytes = await _imageService.LoadImageAsync(apiBaseUrl, ep.Sap);
                 }
-                catch
+                catch (Exception ex)
                 {
-                    imageBytes = null;
+                    Debug.WriteLine($"[MERGE] Error imagen para SAP {ep.Sap}: {ex.Message}");
                 }
 
-                // 5. Crear el modelo final
+                // 6. Create final model
                 var mat = new MaterialModel
                 {
-                    // Imagen
                     ImageBytes = imageBytes,
-
-                    // EPLAN
                     Location = ep.Location,
                     Group = ep.Group,
                     Sap = ep.Sap,
                     Units = ep.Units,
                     Quantity = ep.Units,
-
-                    // Excel (Std)
                     Comments = std?.Comments,
                     Description = std?.Description,
                     Category = std?.Category,
                     Status = std?.Status,
                     Stock = std?.Stock,
                     Creator = std?.Creator,
-
-                    // API (SAP)
                     Provider = sap?.Provider,
                     ProviderRef = sap?.ProviderRef
                 };
 
-                // Añadir a la lista final
                 result.Add(mat);
             }
 
+            Debug.WriteLine($"[MERGE] âœ“ Completado: {result.Count} materiales procesados");
             return result;
         }
     }
