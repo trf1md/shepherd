@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShepherdEplan")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+1b5d3060eeb673f5c349e7206b26341efd599768")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+a6b681e5785afe12a482624ef0f512179ac7599c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShepherdEplan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShepherdEplan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -267,7 +267,6 @@ C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-ios\iossimula
 C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet-nativeaot.a
 C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet.a
 C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
-C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-ios\iossimulator-x64\build-signature\signature
 C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-ios\iossimulator-x64\mauiimage.inputs
 C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-ios\iossimulator-x64\mauifont.inputs
 C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-ios\iossimulator-x64\mauisplash.inputs
@@ -321,3 +320,7 @@ C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-ios\iossimula
 C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-ios\iossimulator-x64\ShepherdEplan.pdb
 C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-ios\iossimulator-x64\ShepherdEplan.genruntimeconfig.cache
 C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-ios\iossimulator-x64\ref\ShepherdEplan.dll
+C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
+C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
+C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
+C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll

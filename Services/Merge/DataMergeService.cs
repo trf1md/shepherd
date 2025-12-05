@@ -31,80 +31,143 @@ namespace ShepherdEplan.Services.Merge
             string excelPath,
             string apiBaseUrl)
         {
-            var result = new List<MaterialModel>();
+            var sw = Stopwatch.StartNew();
+            Debug.WriteLine("[MERGE] ═══════════════════════════════════════");
+            Debug.WriteLine("[MERGE] 🚀 INICIO DE CARGA CONCURRENTE");
+            Debug.WriteLine("[MERGE] ═══════════════════════════════════════");
 
-            Debug.WriteLine("[MERGE] Paso 1: Cargando datos EPLAN...");
+            // ═══════════════════════════════════════════════════════════════
+            // PHASE 1: CONCURRENT DATA LOADING (EPLAN + EXCEL in parallel)
+            // ═══════════════════════════════════════════════════════════════
+            Debug.WriteLine("[MERGE] Fase 1: Cargando EPLAN y Excel en paralelo...");
 
-            // 1. Load EPLAN data (run on background thread to avoid blocking)
-            var eplanList = await Task.Run(() => _eplanService.LoadEplanMaterials(eplanFilePath));
-            Debug.WriteLine($"[MERGE] EPLAN cargado: {eplanList.Count} materiales");
-
-            Debug.WriteLine("[MERGE] Paso 2: Cargando Excel completo UNA SOLA VEZ...");
-
-            // 2. Load Excel ONCE and build a dictionary (CRITICAL FIX!)
-            var excelLookup = await Task.Run(() => _stdService.LoadAllMaterialsFromExcel(excelPath));
-            Debug.WriteLine($"[MERGE] Excel cargado: {excelLookup.Count} materiales en diccionario");
-
-            Debug.WriteLine("[MERGE] Paso 3: Procesando cada material...");
-
-            int processedCount = 0;
-            foreach (var ep in eplanList)
+            var eplanTask = Task.Run(() =>
             {
-                processedCount++;
-                if (processedCount % 10 == 0)
-                {
-                    Debug.WriteLine($"[MERGE] Procesados {processedCount}/{eplanList.Count}...");
-                }
+                var eplanSw = Stopwatch.StartNew();
+                var result = _eplanService.LoadEplanMaterials(eplanFilePath);
+                eplanSw.Stop();
+                Debug.WriteLine($"[MERGE] ✓ EPLAN completado en {eplanSw.ElapsedMilliseconds}ms: {result.Count} materiales");
+                return result;
+            });
 
-                // 3. Lookup in Excel dictionary (no file I/O!)
-                excelLookup.TryGetValue(ep.Sap, out var std);
+            var excelTask = Task.Run(() =>
+            {
+                var excelSw = Stopwatch.StartNew();
+                var result = _stdService.LoadAllMaterialsFromExcel(excelPath);
+                excelSw.Stop();
+                Debug.WriteLine($"[MERGE] ✓ Excel completado en {excelSw.ElapsedMilliseconds}ms: {result.Count} materiales");
+                return result;
+            });
 
-                // 4. API SAP (already async)
-                SapMatInfoModel? sap = null;
-                try
-                {
-                    sap = await _sapService.LoadFromApiAsync(apiBaseUrl, ep.Sap);
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine($"[MERGE] Error API para SAP {ep.Sap}: {ex.Message}");
-                }
+            // Wait for both EPLAN and Excel to complete
+            await Task.WhenAll(eplanTask, excelTask);
 
-                // 5. Image (already async)
-                byte[]? imageBytes = null;
-                try
-                {
-                    imageBytes = await _imageService.LoadImageAsync(apiBaseUrl, ep.Sap);
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine($"[MERGE] Error imagen para SAP {ep.Sap}: {ex.Message}");
-                }
+            var eplanList = await eplanTask;
+            var excelLookup = await excelTask;
 
-                // 6. Create final model
-                var mat = new MaterialModel
-                {
-                    ImageBytes = imageBytes,
-                    Location = ep.Location,
-                    Group = ep.Group,
-                    Sap = ep.Sap,
-                    Units = ep.Units,
-                    Quantity = ep.Units,
-                    Comments = std?.Comments,
-                    Description = std?.Description,
-                    Category = std?.Category,
-                    Status = std?.Status,
-                    Stock = std?.Stock,
-                    Creator = std?.Creator,
-                    Provider = sap?.Provider,
-                    ProviderRef = sap?.ProviderRef
-                };
+            Debug.WriteLine($"[MERGE] ✓ Fase 1 completada en {sw.ElapsedMilliseconds}ms");
 
-                result.Add(mat);
+            // ═══════════════════════════════════════════════════════════════
+            // PHASE 2: PROCESS MATERIALS WITH CONCURRENT API/IMAGE LOADING
+            // ═══════════════════════════════════════════════════════════════
+            Debug.WriteLine("[MERGE] Fase 2: Procesando materiales con API/imágenes concurrentes...");
+
+            var result = new List<MaterialModel>(eplanList.Count);
+            var phase2Sw = Stopwatch.StartNew();
+
+            // Process materials in batches to avoid overwhelming the API
+            const int batchSize = 10; // Process 10 materials concurrently at a time
+            int totalProcessed = 0;
+
+            for (int i = 0; i < eplanList.Count; i += batchSize)
+            {
+                var batch = eplanList.Skip(i).Take(batchSize).ToList();
+
+                // Create tasks for each material in the batch
+                var batchTasks = batch.Select(async ep =>
+                {
+                    // Lookup in Excel dictionary (instant - no I/O)
+                    excelLookup.TryGetValue(ep.Sap, out var std);
+
+                    // Launch API and Image requests concurrently
+                    var sapTask = LoadSapDataAsync(ep.Sap);
+                    var imageTask = LoadImageDataAsync(ep.Sap);
+
+                    await Task.WhenAll(sapTask, imageTask);
+
+                    var sap = await sapTask;
+                    var imageBytes = await imageTask;
+
+                    // Create final model
+                    return new MaterialModel
+                    {
+                        ImageBytes = imageBytes,
+                        Location = ep.Location,
+                        Group = ep.Group,
+                        Sap = ep.Sap,
+                        Units = ep.Units,
+                        Quantity = ep.Units,
+                        Comments = std?.Comments,
+                        Description = std?.Description,
+                        Category = std?.Category,
+                        Status = std?.Status,
+                        Stock = std?.Stock,
+                        Creator = std?.Creator,
+                        Provider = sap?.Provider,
+                        ProviderRef = sap?.ProviderRef
+                    };
+                }).ToList();
+
+                // Wait for the batch to complete
+                var batchResults = await Task.WhenAll(batchTasks);
+                result.AddRange(batchResults);
+
+                totalProcessed += batchResults.Length;
+
+                if (totalProcessed % 50 == 0 || totalProcessed == eplanList.Count)
+                {
+                    Debug.WriteLine($"[MERGE] Progreso: {totalProcessed}/{eplanList.Count} materiales procesados...");
+                }
             }
 
-            Debug.WriteLine($"[MERGE] ✓ Completado: {result.Count} materiales procesados");
+            phase2Sw.Stop();
+            sw.Stop();
+
+            Debug.WriteLine("[MERGE] ═══════════════════════════════════════");
+            Debug.WriteLine($"[MERGE] ✓ Fase 2 completada en {phase2Sw.ElapsedMilliseconds}ms");
+            Debug.WriteLine($"[MERGE] ✓ TOTAL COMPLETADO: {result.Count} materiales en {sw.ElapsedMilliseconds}ms");
+            Debug.WriteLine($"[MERGE] ⚡ Promedio: {(double)sw.ElapsedMilliseconds / result.Count:F2}ms por material");
+            Debug.WriteLine("[MERGE] ═══════════════════════════════════════");
+
             return result;
+        }
+
+        // Helper method for SAP API calls with error handling
+        private async Task<SapMatInfoModel?> LoadSapDataAsync(string sap)
+        {
+            try
+            {
+                return await _sapService.LoadFromApiAsync("https://md0vm00162.emea.bosch.com/materials/api/", sap);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"[MERGE] ⚠️ Error API para SAP {sap}: {ex.Message}");
+                return null;
+            }
+        }
+
+        // Helper method for Image calls with error handling
+        private async Task<byte[]?> LoadImageDataAsync(string sap)
+        {
+            try
+            {
+                return await _imageService.LoadImageAsync("https://md0vm00162.emea.bosch.com/materials/api/", sap);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"[MERGE] ⚠️ Error imagen para SAP {sap}: {ex.Message}");
+                return null;
+            }
         }
     }
 }

@@ -19,7 +19,10 @@ namespace ShepherdEplan.Models
         public string? Status { get; set; }      // texto
         public bool IsStandard { get; set; }
         public bool IsWarning { get; set; }
-        public bool IsBlocked { get; set; }
+        public bool IsBlocked { get; set; } // Diferenciar entre blocked y forbidden
+        // Blocked tiene prioridad sobre el resto de estados
+        // Añ
+
 
         // Stock y proveedor
         public string? Stock { get; set; }

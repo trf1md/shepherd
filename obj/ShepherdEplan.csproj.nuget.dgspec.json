@@ -88,6 +88,10 @@
               "target": "Package",
               "version": "[8.0.20, )",
               "autoReferenced": true
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[23.26.0, )"
             }
           },
           "imports": [
@@ -157,6 +161,10 @@
               "target": "Package",
               "version": "[8.0.20, )",
               "autoReferenced": true
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[23.26.0, )"
             }
           },
           "imports": [
@@ -214,6 +222,10 @@
               "target": "Package",
               "version": "[8.0.20, )",
               "autoReferenced": true
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[23.26.0, )"
             }
           },
           "imports": [
@@ -266,6 +278,10 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.100, )"
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[23.26.0, )"
             }
           },
           "imports": [

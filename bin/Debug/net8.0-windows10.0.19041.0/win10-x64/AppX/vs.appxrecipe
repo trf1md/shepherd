@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-12-05T09:49:59.261</Modified>
+      <Modified>2025-12-05T13:50:09.391</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-12-05T09:43:00.998</Modified>
+      <Modified>2025-12-05T10:45:05.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ShepherdEplan.runtimeconfig.json">
       <PackagePath>ShepherdEplan.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ShepherdEplan.dll">
       <PackagePath>ShepherdEplan.dll</PackagePath>
-      <Modified>2025-12-05T09:49:58.922</Modified>
+      <Modified>2025-12-05T13:50:09.093</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ShepherdEplan.exe</PackagePath>
-      <Modified>2025-12-05T09:49:58.927</Modified>
+      <Modified>2025-12-05T13:50:09.098</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -260,7 +260,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ShepherdEplan.deps.json">
       <PackagePath>ShepherdEplan.deps.json</PackagePath>
-      <Modified>2025-12-05T09:49:59.190</Modified>
+      <Modified>2025-12-05T10:45:05.104</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
