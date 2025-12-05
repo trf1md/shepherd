@@ -30,265 +30,237 @@
     <AppXManifest Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-12-04T11:59:24.529</Modified>
+      <Modified>2025-12-05T09:49:59.261</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-12-03T16:11:59.587</Modified>
+      <Modified>2025-12-05T09:43:00.998</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ShepherdEplan.runtimeconfig.json">
       <PackagePath>ShepherdEplan.runtimeconfig.json</PackagePath>
-      <Modified>2025-12-04T10:49:43.304</Modified>
+      <Modified>2025-12-05T09:49:59.192</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ShepherdEplan.dll">
       <PackagePath>ShepherdEplan.dll</PackagePath>
-      <Modified>2025-12-04T11:59:23.657</Modified>
+      <Modified>2025-12-05T09:49:58.922</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ShepherdEplan.exe</PackagePath>
-      <Modified>2025-12-04T11:59:23.707</Modified>
+      <Modified>2025-12-05T09:49:58.927</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
       <Modified>2025-12-03T08:21:31.152</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
-      <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2025-12-03T16:11:56.911</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
-      <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2025-12-03T16:11:56.923</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
-      <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2025-12-03T16:11:56.942</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
-      <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2025-12-03T16:11:56.968</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
-      <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2025-12-03T16:11:57.060</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
-      <PackagePath>OpenSans-Regular.ttf</PackagePath>
-      <Modified>2025-12-03T08:21:30.951</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
-      <PackagePath>OpenSans-Semibold.ttf</PackagePath>
-      <Modified>2025-12-03T08:21:31.147</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2025-12-03T16:11:58.042</Modified>
+      <Modified>2025-12-05T09:42:59.075</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.036</Modified>
+      <Modified>2025-12-05T09:42:59.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.036</Modified>
+      <Modified>2025-12-05T09:42:59.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.035</Modified>
+      <Modified>2025-12-05T09:42:59.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.035</Modified>
+      <Modified>2025-12-05T09:42:59.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.035</Modified>
+      <Modified>2025-12-05T09:42:59.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.039</Modified>
+      <Modified>2025-12-05T09:42:59.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.039</Modified>
+      <Modified>2025-12-05T09:42:59.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.039</Modified>
+      <Modified>2025-12-05T09:42:59.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.039</Modified>
+      <Modified>2025-12-05T09:42:59.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.039</Modified>
+      <Modified>2025-12-05T09:42:59.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.040</Modified>
+      <Modified>2025-12-05T09:42:59.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.040</Modified>
+      <Modified>2025-12-05T09:42:59.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.040</Modified>
+      <Modified>2025-12-05T09:42:59.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.040</Modified>
+      <Modified>2025-12-05T09:42:59.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.040</Modified>
+      <Modified>2025-12-05T09:42:59.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.041</Modified>
+      <Modified>2025-12-05T09:42:59.075</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.041</Modified>
+      <Modified>2025-12-05T09:42:59.074</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.041</Modified>
+      <Modified>2025-12-05T09:42:59.074</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.041</Modified>
+      <Modified>2025-12-05T09:42:59.074</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.041</Modified>
+      <Modified>2025-12-05T09:42:59.074</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.041</Modified>
+      <Modified>2025-12-05T09:42:59.074</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.041</Modified>
+      <Modified>2025-12-05T09:42:59.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.040</Modified>
+      <Modified>2025-12-05T09:42:59.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.041</Modified>
+      <Modified>2025-12-05T09:42:59.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.040</Modified>
+      <Modified>2025-12-05T09:42:59.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.037</Modified>
+      <Modified>2025-12-05T09:42:59.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.037</Modified>
+      <Modified>2025-12-05T09:42:59.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.037</Modified>
+      <Modified>2025-12-05T09:42:59.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.037</Modified>
+      <Modified>2025-12-05T09:42:59.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.037</Modified>
+      <Modified>2025-12-05T09:42:59.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.038</Modified>
+      <Modified>2025-12-05T09:42:59.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.038</Modified>
+      <Modified>2025-12-05T09:42:59.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.038</Modified>
+      <Modified>2025-12-05T09:42:59.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.038</Modified>
+      <Modified>2025-12-05T09:42:59.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.038</Modified>
+      <Modified>2025-12-05T09:42:59.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.039</Modified>
+      <Modified>2025-12-05T09:42:59.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.039</Modified>
+      <Modified>2025-12-05T09:42:59.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.039</Modified>
+      <Modified>2025-12-05T09:42:59.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.038</Modified>
+      <Modified>2025-12-05T09:42:59.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.038</Modified>
+      <Modified>2025-12-05T09:42:59.071</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.037</Modified>
+      <Modified>2025-12-05T09:42:59.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.036</Modified>
+      <Modified>2025-12-05T09:42:59.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.036</Modified>
+      <Modified>2025-12-05T09:42:59.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.036</Modified>
+      <Modified>2025-12-05T09:42:59.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.036</Modified>
+      <Modified>2025-12-05T09:42:59.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.042</Modified>
+      <Modified>2025-12-05T09:42:59.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.042</Modified>
+      <Modified>2025-12-05T09:42:59.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.042</Modified>
+      <Modified>2025-12-05T09:42:59.068</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.042</Modified>
+      <Modified>2025-12-05T09:42:59.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2025-12-03T16:11:58.042</Modified>
+      <Modified>2025-12-05T09:42:59.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\Documents\Proyectos\ShepherdEplan\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ShepherdEplan.deps.json">
       <PackagePath>ShepherdEplan.deps.json</PackagePath>
-      <Modified>2025-12-04T10:49:43.286</Modified>
+      <Modified>2025-12-05T09:49:59.190</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\TRF1MD\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

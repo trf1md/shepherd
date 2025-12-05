@@ -6,6 +6,44 @@ namespace ShepherdEplan.Services.Standard
 {
     public sealed class GetStdMatInfoService
     {
+        // Helper method to convert status codes to text
+        private string ConvertStatusCodeToText(string statusValue)
+        {
+            if (int.TryParse(statusValue.Trim(), out int code))
+            {
+                return code switch
+                {
+                    0 => "Standard",
+                    1 => "Forbidden",
+                    2 => "Warning",
+                    3 => "NotStandard",
+                    _ => "Unknown"
+                };
+            }
+
+            // If it's already text, return as-is
+            return statusValue.Trim();
+        }
+
+        // Helper method to convert stock codes to text
+        private string ConvertStockCodeToText(string stockValue)
+        {
+            if (int.TryParse(stockValue.Trim(), out int code))
+            {
+                return code switch
+                {
+                    0 => "V1",
+                    1 => "Pedir",
+                    2 => "No aplica",
+                    3 => "Indefinido",
+                    _ => "Unknown"
+                };
+            }
+
+            // If it's already text, return as-is
+            return stockValue.Trim();
+        }
+
         // OLD METHOD - still available for backward compatibility
         public StdMatInfoModel? LoadMaterialFromExcel(string excelPath, string sap)
         {
@@ -26,17 +64,24 @@ namespace ShepherdEplan.Services.Standard
                     if (!string.Equals(excelSap, sap, StringComparison.OrdinalIgnoreCase))
                         continue;
 
+                    var statusRaw = row.Cell(2).GetString().Trim();
+                    var statusText = ConvertStatusCodeToText(statusRaw);
+
+                    var stockRaw = row.Cell(4).GetString().Trim();
+                    var stockText = ConvertStockCodeToText(stockRaw);
+
                     var model = new StdMatInfoModel
                     {
                         Sap = sap,
-                        Status = row.Cell(2).GetString().Trim(),
+                        Status = statusText,  // Converted to text
                         Comments = row.Cell(3).GetString().Trim(),
-                        Stock = row.Cell(4).GetString().Trim(),
+                        Stock = stockText,    // Converted to text
                         Description = row.Cell(5).GetString().Trim(),
                         Creator = row.Cell(7).GetString().Trim(),
                         Category = sheet.Name
                     };
 
+                    Debug.WriteLine($"[EXCEL] SAP {sap} → Status: {statusRaw}→'{statusText}', Stock: {stockRaw}→'{stockText}'");
                     return model;
                 }
             }
@@ -44,7 +89,7 @@ namespace ShepherdEplan.Services.Standard
             return null;
         }
 
-        // NEW METHOD - Load ALL materials from Excel into a dictionary (CRITICAL FIX!)
+        // NEW METHOD - Load ALL materials from Excel into a dictionary
         public Dictionary<string, StdMatInfoModel> LoadAllMaterialsFromExcel(string excelPath)
         {
             Debug.WriteLine($"[EXCEL] Abriendo archivo: {excelPath}");
@@ -78,18 +123,23 @@ namespace ShepherdEplan.Services.Standard
                         if (string.IsNullOrWhiteSpace(excelSap))
                             continue;
 
+                        var statusRaw = row.Cell(2).GetString().Trim();
+                        var statusText = ConvertStatusCodeToText(statusRaw);
+
+                        var stockRaw = row.Cell(4).GetString().Trim();
+                        var stockText = ConvertStockCodeToText(stockRaw);
+
                         var model = new StdMatInfoModel
                         {
                             Sap = excelSap,
-                            Status = row.Cell(2).GetString().Trim(),
+                            Status = statusText,  // Converted to text
                             Comments = row.Cell(3).GetString().Trim(),
-                            Stock = row.Cell(4).GetString().Trim(),
+                            Stock = stockText,    // Converted to text
                             Description = row.Cell(5).GetString().Trim(),
                             Creator = row.Cell(7).GetString().Trim(),
                             Category = sheet.Name
                         };
 
-                        // Add or update in dictionary (last occurrence wins)
                         dictionary[excelSap] = model;
                         rowCount++;
                     }

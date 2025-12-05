@@ -2,54 +2,385 @@
 <ContentPage
     x:Class="ShepherdEplan.Views.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="White">
 
-    <Grid RowDefinitions="Auto, Auto, *" Padding="10">
+    <Grid RowDefinitions="Auto, Auto, Auto, *" Padding="10">
 
-        <!-- Botón de carga (con evento Clicked para debug) -->
-        <Button
-            Text="Cargar materiales"
-            Margin="0,0,0,10"
-            Command="{Binding LoadCommand}"
-            Clicked="OnLoadClicked" />
+        <!-- HEADER SECTION: Statistics, Project Info, Search -->
+        <Grid Grid.Row="0" 
+              RowDefinitions="Auto,Auto,Auto" 
+              ColumnDefinitions="*,*,*"
+              Padding="10"
+              BackgroundColor="#F0F0F0"
+              Margin="0,0,0,10">
 
-        <!-- Tabla con materiales -->
-        <CollectionView
-            Grid.Row="2"
-            ItemsSource="{Binding Materials}"
-            SelectionMode="None">
+            <!-- Row 0: Statistics -->
+            <VerticalStackLayout Grid.Row="0" Grid.Column="0" Spacing="5" Padding="10">
+                <Label Text="Standard" FontAttributes="Bold" TextColor="Green" FontSize="14" />
+                <Label FontSize="12">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding StandardCount}" TextColor="Black"/>
+                            <Span Text="/" TextColor="Black"/>
+                            <Span Text="{Binding TotalMaterials}" TextColor="Black"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <ProgressBar Progress="{Binding StandardPercentage}" 
+                             ProgressColor="LightGreen" 
+                             HeightRequest="20"
+                             BackgroundColor="LightGray" />
+            </VerticalStackLayout>
 
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
+            <VerticalStackLayout Grid.Row="0" Grid.Column="1" Spacing="5" Padding="10">
+                <Label Text="Warning" FontAttributes="Bold" TextColor="Orange" FontSize="14" />
+                <Label FontSize="12" TextColor="Black">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding WarningCount}" TextColor="Black"/>
+                            <Span Text="/" TextColor="Black"/>
+                            <Span Text="{Binding TotalMaterials}" TextColor="Black"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <ProgressBar Progress="{Binding WarningPercentage}" 
+                             ProgressColor="Yellow" 
+                             HeightRequest="20"
+                             BackgroundColor="LightGray" />
+            </VerticalStackLayout>
 
-                    <Grid ColumnDefinitions="80,80,80,140,140,200,80,80,100,100,80,100"
-                          Padding="5"
-                          ColumnSpacing="5"
-                          MinimumHeightRequest="60">
+            <VerticalStackLayout Grid.Row="0" Grid.Column="2" Spacing="5" Padding="10">
+                <Label Text="Forbidden" FontAttributes="Bold" TextColor="Red" FontSize="14" />
+                <Label FontSize="12" TextColor="Black">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding ForbiddenCount}" TextColor="Black"/>
+                            <Span Text="/" TextColor="Black"/>
+                            <Span Text="{Binding TotalMaterials}" TextColor="Black"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <ProgressBar Progress="{Binding ForbiddenPercentage}" 
+                             ProgressColor="LightCoral" 
+                             HeightRequest="20"
+                             BackgroundColor="LightGray" />
+            </VerticalStackLayout>
 
-                        <Image Grid.Column="0"
-                               WidthRequest="60"
-                               HeightRequest="60"
-                               Aspect="AspectFit"
-                               Source="{Binding ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" />
+            <!-- Row 1: Project Information -->
+            <HorizontalStackLayout Grid.Row="1" Grid.ColumnSpan="3" Spacing="30" Padding="10" HorizontalOptions="Center">
+                <HorizontalStackLayout Spacing="5">
+                    <Label Text="Proyecto:" FontAttributes="Bold" FontSize="12" TextColor="Black" />
+                    <Label Text="{Binding ProjectNumber}" FontSize="12" TextColor="Black" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="5">
+                    <Label Text="Ext Proyecto:" FontAttributes="Bold" FontSize="12" TextColor="Black" />
+                    <Label Text="{Binding ExtProject}" FontSize="12" TextColor="Black" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Spacing="5">
+                    <Label Text="Proyecto SAP:" FontAttributes="Bold" FontSize="12" TextColor="Black" />
+                    <Label Text="{Binding ProjectSap}" FontSize="12" TextColor="Black" />
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>
 
-                        <Label Grid.Column="1" Text="{Binding Location}" VerticalTextAlignment="Center" />
-                        <Label Grid.Column="2" Text="{Binding Group}" VerticalTextAlignment="Center" />
-                        <Label Grid.Column="3" Text="{Binding Sap}" VerticalTextAlignment="Center" />
-                        <Label Grid.Column="4" Text="{Binding Comments}" VerticalTextAlignment="Center" />
-                        <Label Grid.Column="5" Text="{Binding Description}" VerticalTextAlignment="Center" />
-                        <Label Grid.Column="6" Text="{Binding Category}" VerticalTextAlignment="Center" />
-                        <Label Grid.Column="7" Text="{Binding Status}" VerticalTextAlignment="Center" />
-                        <Label Grid.Column="8" Text="{Binding Stock}" VerticalTextAlignment="Center" />
-                        <Label Grid.Column="9" Text="{Binding Provider}" VerticalTextAlignment="Center" />
-                        <Label Grid.Column="10" Text="{Binding ProviderRef}" VerticalTextAlignment="Center" />
-                        <Label Grid.Column="11" Text="{Binding Quantity}" VerticalTextAlignment="Center" />
+            <!-- Row 2: Search and Grouping Controls -->
+            <HorizontalStackLayout Grid.Row="2" Grid.ColumnSpan="3" Spacing="10" Padding="10" HorizontalOptions="Center">
+                <Label Text="Buscar SAP:" VerticalOptions="Center" FontSize="12" FontAttributes="Bold" TextColor="Black" />
+                <Entry Text="{Binding SearchSap}" 
+                       Placeholder="Introduce número SAP..."
+                       WidthRequest="200"
+                       VerticalOptions="Center"
+                       TextColor="Black" />
+                <Button Text="Buscar" 
+                        Command="{Binding SearchCommand}"
+                        BackgroundColor="DodgerBlue"
+                        TextColor="White"
+                        WidthRequest="80" />
+                <Button Text="Mostrar Todo" 
+                        Command="{Binding ClearSearchCommand}"
+                        BackgroundColor="Gray"
+                        TextColor="White"
+                        IsVisible="{Binding IsFiltered}"
+                        WidthRequest="110" />
+                <Button Text="Desagrupar" 
+                        Command="{Binding ClearGroupingCommand}"
+                        BackgroundColor="Orange"
+                        TextColor="White"
+                        IsVisible="{Binding IsGrouped}"
+                        WidthRequest="110" />
+                <Label Text="{Binding SearchMessage}" 
+                       VerticalOptions="Center"
+                       FontSize="12"
+                       TextColor="Red"
+                       FontAttributes="Italic" />
+            </HorizontalStackLayout>
 
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
+        </Grid>
 
-        </CollectionView>
+        <!-- TABLE HEADERS -->
+        <ScrollView 
+            Grid.Row="1" 
+            Orientation="Horizontal"
+            HorizontalScrollBarVisibility="Always"
+            x:Name="HeaderScrollView">
+
+            <Grid 
+                ColumnDefinitions="80,100,100,120,200,250,120,120,100,150,120,100"
+                Padding="5"
+                ColumnSpacing="5"
+                BackgroundColor="LightGray"
+                MinimumHeightRequest="40"
+                Margin="0,0,0,5">
+
+                <!-- Non-clickable header -->
+                <Label Grid.Column="0" Text="Imagen" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+                <!-- Clickable headers with visual feedback -->
+                <Border Grid.Column="1" Stroke="Transparent" StrokeThickness="2" BackgroundColor="{Binding CurrentGroupBy, Converter={StaticResource GroupHeaderConverter}, ConverterParameter='Location'}">
+                    <Label Text="📍 Location" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" IsEnabled="{Binding CanGroup}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GroupByCommand}" CommandParameter="Location" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Border>
+
+                <Border Grid.Column="2" Stroke="Transparent" StrokeThickness="2" BackgroundColor="{Binding CurrentGroupBy, Converter={StaticResource GroupHeaderConverter}, ConverterParameter='Group'}">
+                    <Label Text="👥 Group" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" IsEnabled="{Binding CanGroup}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GroupByCommand}" CommandParameter="Group" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Border>
+
+                <Border Grid.Column="3" Stroke="Transparent" StrokeThickness="2" BackgroundColor="{Binding CurrentGroupBy, Converter={StaticResource GroupHeaderConverter}, ConverterParameter='Sap'}">
+                    <Label Text="🔢 SAP" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" IsEnabled="{Binding CanGroup}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GroupByCommand}" CommandParameter="Sap" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Border>
+
+                <!-- Non-clickable headers -->
+                <Label Grid.Column="4" Text="Comments" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                <Label Grid.Column="5" Text="Description" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+                <Border Grid.Column="6" Stroke="Transparent" StrokeThickness="2" BackgroundColor="{Binding CurrentGroupBy, Converter={StaticResource GroupHeaderConverter}, ConverterParameter='Category'}">
+                    <Label Text="📂 Category" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" IsEnabled="{Binding CanGroup}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GroupByCommand}" CommandParameter="Category" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Border>
+
+                <Border Grid.Column="7" Stroke="Transparent" StrokeThickness="2" BackgroundColor="{Binding CurrentGroupBy, Converter={StaticResource GroupHeaderConverter}, ConverterParameter='Status'}">
+                    <Label Text="⚠️ Status" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" IsEnabled="{Binding CanGroup}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GroupByCommand}" CommandParameter="Status" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Border>
+
+                <Border Grid.Column="8" Stroke="Transparent" StrokeThickness="2" BackgroundColor="{Binding CurrentGroupBy, Converter={StaticResource GroupHeaderConverter}, ConverterParameter='Stock'}">
+                    <Label Text="📦 Stock" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" IsEnabled="{Binding CanGroup}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GroupByCommand}" CommandParameter="Stock" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Border>
+
+                <Border Grid.Column="9" Stroke="Transparent" StrokeThickness="2" BackgroundColor="{Binding CurrentGroupBy, Converter={StaticResource GroupHeaderConverter}, ConverterParameter='Provider'}">
+                    <Label Text="🏭 Provider" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" IsEnabled="{Binding CanGroup}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GroupByCommand}" CommandParameter="Provider" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Border>
+
+                <!-- Non-clickable headers -->
+                <Label Grid.Column="10" Text="ProviderRef" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                <Label Grid.Column="11" Text="Quantity" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+            </Grid>
+        </ScrollView>
+
+        <!-- DATA ROWS (Flat or Grouped) -->
+        <ScrollView 
+            Grid.Row="3" 
+            Orientation="Both"
+            HorizontalScrollBarVisibility="Always"
+            VerticalScrollBarVisibility="Always"
+            Scrolled="OnDataScrolled"
+            x:Name="DataScrollView">
+
+            <Grid>
+                <!-- Flat view (when not grouped) -->
+                <CollectionView
+                    ItemsSource="{Binding Materials}"
+                    SelectionMode="None"
+                    IsVisible="{Binding IsGrouped, Converter={StaticResource InverseBoolConverter}}">
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+
+                            <VerticalStackLayout Spacing="0">
+
+                                <Grid x:Name="RowGrid"
+                                      ColumnDefinitions="80,100,100,120,200,250,120,120,100,150,120,100"
+                                      Padding="5"
+                                      ColumnSpacing="5"
+                                      HeightRequest="50"
+                                      BackgroundColor="{Binding Status, Converter={StaticResource StatusToColorConverter}}">
+
+                                    <Image x:Name="RowImage"
+                                           Grid.Column="0"
+                                           WidthRequest="40"
+                                           HeightRequest="40"
+                                           Aspect="AspectFit"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           Source="{Binding ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}">
+
+                                        <Image.GestureRecognizers>
+                                            <PointerGestureRecognizer PointerEntered="OnImagePointerEntered" 
+                                                                      PointerExited="OnImagePointerExited" />
+                                        </Image.GestureRecognizers>
+
+                                    </Image>
+
+                                    <Label Grid.Column="1" Text="{Binding Location}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="2" Text="{Binding Group}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="3" Text="{Binding Sap}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="4" Text="{Binding Comments}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="5" Text="{Binding Description}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="6" Text="{Binding Category}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="7" Text="{Binding Status}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="8" Text="{Binding Stock}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="9" Text="{Binding Provider}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="10" Text="{Binding ProviderRef}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="11" Text="{Binding Quantity}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+
+                                </Grid>
+
+                                <!-- Black separator line -->
+                                <BoxView HeightRequest="1" Color="Black" />
+
+                            </VerticalStackLayout>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+                <!-- Grouped view (when grouped) -->
+                <CollectionView
+                    ItemsSource="{Binding GroupedMaterials}"
+                    SelectionMode="None"
+                    IsGrouped="True"
+                    IsVisible="{Binding IsGrouped}">
+
+                    <CollectionView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <Grid BackgroundColor="DarkGray" Padding="10" Margin="0,5,0,0">
+                                <Label Text="{Binding GroupName}" 
+                                       FontSize="16" 
+                                       FontAttributes="Bold" 
+                                       TextColor="White" 
+                                       VerticalTextAlignment="Center" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.GroupHeaderTemplate>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+
+                            <VerticalStackLayout Spacing="0">
+
+                                <Grid x:Name="RowGrid"
+                                      ColumnDefinitions="80,100,100,120,200,250,120,120,100,150,120,100"
+                                      Padding="5"
+                                      ColumnSpacing="5"
+                                      HeightRequest="50"
+                                      BackgroundColor="{Binding Status, Converter={StaticResource StatusToColorConverter}}">
+
+                                    <Image x:Name="RowImage"
+                                           Grid.Column="0"
+                                           WidthRequest="40"
+                                           HeightRequest="40"
+                                           Aspect="AspectFit"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           Source="{Binding ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}">
+
+                                        <Image.GestureRecognizers>
+                                            <PointerGestureRecognizer PointerEntered="OnImagePointerEntered" 
+                                                                      PointerExited="OnImagePointerExited" />
+                                        </Image.GestureRecognizers>
+
+                                    </Image>
+
+                                    <Label Grid.Column="1" Text="{Binding Location}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="2" Text="{Binding Group}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="3" Text="{Binding Sap}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="4" Text="{Binding Comments}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="5" Text="{Binding Description}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="6" Text="{Binding Category}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="7" Text="{Binding Status}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="8" Text="{Binding Stock}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="9" Text="{Binding Provider}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="10" Text="{Binding ProviderRef}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+                                    <Label Grid.Column="11" Text="{Binding Quantity}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="12" />
+
+                                </Grid>
+
+                                <!-- Black separator line -->
+                                <BoxView HeightRequest="1" Color="Black" />
+
+                            </VerticalStackLayout>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+            </Grid>
+
+        </ScrollView>
+
+        <!-- LOADING OVERLAY -->
+        <Grid 
+            Grid.Row="3"
+            IsVisible="{Binding IsBusy}"
+            BackgroundColor="#80FFFFFF"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+
+            <VerticalStackLayout 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center"
+                Spacing="20">
+
+                <ActivityIndicator 
+                    IsRunning="{Binding IsBusy}"
+                    Color="DodgerBlue"
+                    WidthRequest="60"
+                    HeightRequest="60" />
+
+                <Label 
+                    Text="Cargando materiales..."
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    TextColor="DodgerBlue"
+                    HorizontalTextAlignment="Center" />
+
+                <Label 
+                    Text="Por favor espere mientras se cargan los datos de EPLAN, Excel y la API."
+                    FontSize="14"
+                    TextColor="Gray"
+                    HorizontalTextAlignment="Center"
+                    MaximumWidthRequest="400" />
+
+            </VerticalStackLayout>
+
+        </Grid>
 
     </Grid>
 

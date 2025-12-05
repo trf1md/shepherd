@@ -13,7 +13,11 @@
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
+            <!-- Converters -->
             <converters:ByteArrayToImageConverter x:Key="ByteArrayToImageConverter" />
+            <converters:StatusToColorConverter x:Key="StatusToColorConverter" />
+            <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+            <converters:GroupHeaderConverter x:Key="GroupHeaderConverter" />
 
         </ResourceDictionary>
     </Application.Resources>

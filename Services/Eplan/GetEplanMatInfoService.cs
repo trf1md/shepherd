@@ -51,11 +51,14 @@ namespace ShepherdEplan.Services.Eplan
                 if (!int.TryParse(qtyString, out int qty))
                     qty = 0;
 
-                var digits = new string(body.Where(char.IsDigit).ToArray());
-                if (digits.Length < 10)
+                // FIX: Take last 10 characters (alphanumeric), not just digits
+                if (body.Length < 10)
+                {
+                    Debug.WriteLine($"[EPLAN] ⚠️ Body demasiado corto ({body.Length} chars): '{body}'");
                     return null;
+                }
 
-                string sap = digits[^10..];
+                string sap = body[^10..]; // Last 10 characters (can include letters)
 
                 return new EplanMatInfoModel
                 {

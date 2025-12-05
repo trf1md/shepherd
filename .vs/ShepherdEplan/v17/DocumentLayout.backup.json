@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\services\\merge\\datamergeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:services\\merge\\datamergeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\services\\eplan\\geteplanmatinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:services\\eplan\\geteplanmatinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\services\\standard\\getstdmatinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:services\\standard\\getstdmatinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\viewmodels\\materialsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:viewmodels\\materialsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\converters\\statustocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:converters\\statustocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\converters\\bytearraytoimageconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:converters\\bytearraytoimageconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\models\\materialmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:models\\materialmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\converters\\groupheaderconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:converters\\groupheaderconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\viewmodels\\materialsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:viewmodels\\materialsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,6 +29,30 @@
     {
       "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\services\\standard\\getstdmatinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:services\\standard\\getstdmatinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\services\\common\\logservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:services\\common\\logservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\converters\\inverseboolconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:converters\\inverseboolconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\models\\materialmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:models\\materialmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\services\\eplan\\geteplanmatinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:services\\eplan\\geteplanmatinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|c:\\users\\trf1md\\documents\\proyectos\\shepherdeplan\\services\\merge\\datamergeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B81FFCD8-0D43-4155-A624-8C3B21A3487F}|ShepherdEplan.csproj|solutionrelative:services\\merge\\datamergeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +66,71 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "GroupHeaderConverter.cs",
+              "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Converters\\GroupHeaderConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\GroupHeaderConverter.cs",
+              "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Converters\\GroupHeaderConverter.cs",
+              "RelativeToolTip": "Converters\\GroupHeaderConverter.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T09:07:52.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Views\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Views\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Views\\MainPage.xaml",
+              "RelativeToolTip": "Views\\MainPage.xaml",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAIwIcAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-03T15:49:44.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LogService.cs",
+              "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Services\\Common\\LogService.cs",
+              "RelativeDocumentMoniker": "Services\\Common\\LogService.cs",
+              "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Services\\Common\\LogService.cs",
+              "RelativeToolTip": "Services\\Common\\LogService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T15:19:17.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InverseBoolConverter.cs",
+              "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Converters\\InverseBoolConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\InverseBoolConverter.cs",
+              "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Converters\\InverseBoolConverter.cs",
+              "RelativeToolTip": "Converters\\InverseBoolConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T15:02:55.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StatusToColorConverter.cs",
+              "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Converters\\StatusToColorConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\StatusToColorConverter.cs",
+              "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Converters\\StatusToColorConverter.cs",
+              "RelativeToolTip": "Converters\\StatusToColorConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T14:35:24.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ByteArrayToImageConverter.cs",
               "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Converters\\ByteArrayToImageConverter.cs",
               "RelativeDocumentMoniker": "Converters\\ByteArrayToImageConverter.cs",
@@ -63,46 +143,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "MaterialModel.cs",
               "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Models\\MaterialModel.cs",
               "RelativeDocumentMoniker": "Models\\MaterialModel.cs",
               "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Models\\MaterialModel.cs",
               "RelativeToolTip": "Models\\MaterialModel.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA7wCQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA5wCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T11:56:03.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T11:56:03.469Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "GetStdMatInfoService.cs",
               "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Services\\Standard\\GetStdMatInfoService.cs",
               "RelativeDocumentMoniker": "Services\\Standard\\GetStdMatInfoService.cs",
               "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Services\\Standard\\GetStdMatInfoService.cs",
               "RelativeToolTip": "Services\\Standard\\GetStdMatInfoService.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAUwGwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAUwJ4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T11:55:18.668Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "GetEplanMatInfoService.cs",
               "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Services\\Eplan\\GetEplanMatInfoService.cs",
               "RelativeDocumentMoniker": "Services\\Eplan\\GetEplanMatInfoService.cs",
               "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Services\\Eplan\\GetEplanMatInfoService.cs",
               "RelativeToolTip": "Services\\Eplan\\GetEplanMatInfoService.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAUwEwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T11:54:54.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T11:54:54.569Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
               "Title": "DataMergeService.cs",
               "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Services\\Merge\\DataMergeService.cs",
               "RelativeDocumentMoniker": "Services\\Merge\\DataMergeService.cs",
@@ -110,59 +188,46 @@
               "RelativeToolTip": "Services\\Merge\\DataMergeService.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAmwD4AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T11:54:10.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T11:54:10.848Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Views\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "Views\\MainPage.xaml.cs",
               "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Views\\MainPage.xaml.cs",
               "RelativeToolTip": "Views\\MainPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAQwEcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T16:10:11.418Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Views\\MainPage.xaml",
-              "RelativeDocumentMoniker": "Views\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\Views\\MainPage.xaml",
-              "RelativeToolTip": "Views\\MainPage.xaml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAADcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-03T15:49:44.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MaterialsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\ViewModels\\MaterialsViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MaterialsViewModel.cs",
               "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\ViewModels\\MaterialsViewModel.cs",
               "RelativeToolTip": "ViewModels\\MaterialsViewModel.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAA4wJ4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAANoBAAAAAAAAAAAkwOQBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T12:04:17.05Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
               "ToolTip": "C:\\Users\\TRF1MD\\Documents\\Proyectos\\ShepherdEplan\\App.xaml",
               "RelativeToolTip": "App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwBMAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-03T11:57:23.964Z"
+              "WhenOpened": "2025-12-03T11:57:23.964Z",
+              "EditorCaption": ""
             }
           ]
         }
